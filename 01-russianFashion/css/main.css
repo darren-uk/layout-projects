@@ -1,0 +1,204 @@
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container {
+  margin: 5% 10%;
+  border: 1px solid grey;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 60%;
+}
+
+.container nav {
+  width: 110%;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid grey;
+  -ms-flex-item-align: center;
+      align-self: center;
+  padding: 10px 7%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  z-index: 2;
+}
+
+.container nav .left-nav {
+  color: grey;
+  text-transform: uppercase;
+}
+
+.container nav .middle-nav {
+  text-transform: uppercase;
+  color: grey;
+}
+
+.container nav .right-nav a {
+  text-decoration: none;
+  color: grey;
+}
+
+.container nav .right-nav a:hover {
+  border-bottom: 2px solid red;
+}
+
+.container h2.publication {
+  font-family: "Rozha One", serif;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 4em;
+  z-index: 2;
+}
+
+.container .main-image {
+  position: relative;
+  background-image: url("../images/woman.jpg");
+  height: 959px;
+  width: 110%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #000;
+  background-blend-mode: luminosity;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin-top: 100px;
+}
+
+.container .main-image .vertical-title {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .main-image .vertical-title h1 {
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  font-family: 'Courier New', Courier, monospace;
+  color: rgba(255, 0, 0, 0.521);
+  font-size: 20em;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.container article {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr 2fr;
+      grid-template-columns: 3fr 2fr;
+  z-index: 2;
+}
+
+.container article .left-article {
+  margin: auto;
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+.container article .right-article {
+  padding: 40px;
+}
+
+.container article .right-article .next {
+  padding: 8px 0px;
+}
+
+.container article .right-article .next a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+}
+
+.container article .right-article .next a i {
+  color: red;
+}
+
+.container article .right-article .next a:hover {
+  border-bottom: 2px solid red;
+}
+
+@media only screen and (max-width: 768px) {
+  .container nav {
+    font-size: 0.6em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+    gap: 10px;
+  }
+  .container nav .left-nav,
+  .container nav .middle-nav,
+  .container nav .right-nav {
+    font-size: inherit;
+  }
+  .container nav .left-nav a,
+  .container nav .middle-nav a,
+  .container nav .right-nav a {
+    font-size: inherit;
+  }
+  .container article {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container article .left-article {
+    padding: 20% 0px;
+  }
+}

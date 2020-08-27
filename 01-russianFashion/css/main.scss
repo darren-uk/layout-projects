@@ -1,0 +1,168 @@
+$rozha:'Rozha One',
+serif;
+
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    margin: 5% 10%;
+    border: 1px solid grey;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+
+    nav {
+        width: 110%;
+        height: 50px;
+        display: flex;
+        border-bottom: 1px solid grey;
+        align-self: center;
+        padding: 10px 7%;
+        justify-content: space-between;
+        z-index: 2;
+
+        .left-nav {
+            color: grey;
+            text-transform: uppercase;
+        }
+
+        .middle-nav {
+            text-transform: uppercase;
+            color: grey;
+        }
+
+        .right-nav {
+            a {
+                text-decoration: none;
+                color: grey;
+
+                &:hover {
+                    border-bottom: 2px solid red;
+                }
+            }
+        }
+    }
+
+    h2.publication {
+        font-family: $rozha;
+        align-self: center;
+        font-size: 4em;
+        z-index: 2;
+    }
+
+    .main-image {
+        position: relative;
+        background-image: url('../images/woman.jpg');
+        height: 959px;
+        width: 110%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-color: #000;
+        background-blend-mode: luminosity;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        margin-top: 100px;
+
+
+        .vertical-title {
+
+            height: max-content;
+            width: max-content;
+            display: flex;
+            justify-content: center;
+
+
+
+            h1 {
+                writing-mode: vertical-rl;
+                font-family: 'Courier New', Courier, monospace;
+                color: rgba(255, 0, 0, 0.521);
+                font-size: 20em;
+                height: max-content;
+            }
+
+        }
+    }
+
+    article {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        z-index: 2;
+
+        .left-article {
+            margin: auto;
+            font-size: 1.2em;
+            font-weight: 700;
+        }
+
+        .right-article {
+            padding: 40px;
+
+            .next {
+                padding: 8px 0px;
+
+                a {
+                    text-decoration: none;
+                    color: #000;
+                    font-weight: 600;
+
+                    i {
+                        color: red;
+                    }
+
+                    &:hover {
+                        border-bottom: 2px solid red;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .container {
+        nav {
+            font-size: 0.6em;
+            display: flex;
+            flex-direction: column;
+            height: min-content;
+            gap: 10px;
+
+            .left-nav,
+            .middle-nav,
+            .right-nav {
+                font-size: inherit;
+
+                a {
+                    font-size: inherit;
+                }
+            }
+        }
+
+        article {
+            display: flex;
+            flex-direction: column;
+
+            .left-article {
+                padding: 20% 0px;
+            }
+        }
+    }
+}
